@@ -1,9 +1,8 @@
 # CAL (HEADING 1 FORMAT)
-	"CAL" stands for Computer Automated Lighting (Using Blynk and LightshowPi)
+	"CAL" stands for Computer Automated Lighting (Using Blynk and LightshowPi). The hope is to allow people of varying ages to get into Christmas lightshows, as well as home automation. 
 
-## This is a test to ensure I know how to use GitHub (HEADING 2 FORMAT)
-Test Test
-
-###(HEADING 3 FORMAT)
-	Subtext
+## Parts of the CAL repo:
+Blynk
+Lightshowpi
+WiringPi
 

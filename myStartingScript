@@ -1,0 +1,49 @@
+#!/bin/bash
+
+clear
+echo " "
+echo 'To whomever may have accessed my lightshow system.'
+echo "Welcome! If you're a hacker, you're not welcome"
+echo "If you're a friend helping me re-work a failed"
+echo "code, I'm happy to have you. In whichever case,"
+echo "have a nice day, and happy coding! "
+echo " "
+echo "	    ____  ____"
+echo "	   /     /   /  /"
+echo "	  /     /---/  /"
+echo "	 /     /   /  /"
+echo "	 ---- /   /  /____"
+echo " "
+echo "COMPUTER AUTOMATED LIGHTING"
+echo " "
+echo "Checking GitHub for Updates..."
+cd 
+echo " "
+cd CAL
+git pull
+
+cd Music
+echo " "
+echo "Getting rid of spaces"
+sh getridofspaces.sh
+sleep 1
+
+cd
+echo " "
+
+sleep 2
+echo "Mounting USB..."
+sudo mount /dev/sda1 usbDevice
+echo " "
+
+sleep 1
+echo "Making playlist from GitHub songs"
+cd /home/pi/lightshowpi/tools
+echo /home/pi/CAL/Music | python playlist_generator.py
+echo " "
+echo "Playlist was hopefully created"
+echo " "
+
+sleep 2
+echo "All startup procedures have been run, and you're ready to go!"
+echo " "

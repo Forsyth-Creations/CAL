@@ -29,17 +29,21 @@ if echo "$answer" | grep -iq "^y" ;then
 	
 	#Lightshowpi Installing
 	cd ~
+	echo -ne '##                          (12%)\r'
 	echo "Installing LightshowPi"
 	# Install git (if you don't already have it)
 	sudo apt-get install git-core
 	# Clone the repository to /home/pi/lightshowpi
 	cd ~
+	sleep 1
 	git clone https://togiles@bitbucket.org/togiles/lightshowpi.git
+	echo -ne '#############              (50%)\r'
 	# Grab the stable branch
 	cd lightshowpi
+	sleep 1
 	git fetch && git checkout stable
+	echo -ne '#############              (100%)\r'
 	
-	#echo "Installing WiringPi"
 else
     echo "Okay, maybe next time"
 	#sleep 1

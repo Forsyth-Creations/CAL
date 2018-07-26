@@ -1,6 +1,7 @@
 #!/bin/bash
 
 clear
+cd
 echo " "
 echo 'To whomever may have accessed my lightshow system.'
 echo "Welcome! If you're a hacker, you're not welcome"
@@ -20,12 +21,15 @@ echo "Checking GitHub for Updates..."
 cd 
 echo " "
 cd CAL
-git pull
+git pull origin
 
-cd Music
+
+cd /home/pi/CAL/Music
 echo " "
 echo "Getting rid of spaces"
-sh getridofspaces.sh
+sleep 2
+find . -depth -name '* *' \
+| while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
 sleep 1
 
 cd

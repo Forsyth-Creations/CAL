@@ -20,8 +20,8 @@ echo " "
 echo "Checking GitHub for Updates..."
 cd 
 echo " "
-cd CAL
-git pull origin
+cd /home/pi/CAL/Music	
+git pull 
 
 
 cd /home/pi/CAL/Music
@@ -45,8 +45,12 @@ echo "Making playlist from GitHub songs"
 cd /home/pi/lightshowpi/tools
 echo /home/pi/CAL/Music | python playlist_generator.py
 echo " "
-echo "Playlist was hopefully created"
+echo "Playlist was created"
 echo " "
+
+sleep 1
+echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
+cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=fb919880bf8d4f9b973ea70798b5611d &
 
 sleep 2
 echo "All startup procedures have been run, and you're ready to go!"

@@ -1,5 +1,8 @@
 #!/bin/bash
 
+authCode=$(sed '' /home/pi/authCode.txt| xargs | sed 's/ /,/g')
+echo $authCode
+
 clear
 cd
 echo " "
@@ -50,7 +53,7 @@ echo " "
 
 sleep 1
 echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
-cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=fb919880bf8d4f9b973ea70798b5611d &
+cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &
 
 sleep 2
 echo "All startup procedures have been run, and you're ready to go!"

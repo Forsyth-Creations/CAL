@@ -10,3 +10,8 @@ echo Your Auth Code is $in
 cd /home/pi
 truncate -s 0 authCode.txt
 echo $in  > authCode.txt
+
+echo " "
+echo "Please restart devide to use new Auth code"
+echo "Use 'sudo reboot' "
+echo " "

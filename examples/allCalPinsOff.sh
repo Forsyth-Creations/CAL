@@ -16,11 +16,13 @@ pinsUsed=(4 1 16 15)
 #done
 
 
-echo "Pins Used"
+#echo "Pins Used"
 for item in ${pinsUsed[*]}
 do
         gpio mode $item out
         gpio write $item 1
-        sleep 0.1
-	printf "   %s\n" $item
+        #sleep 0.1
+	#printf "   %s\n" $item
 done
+
+exit

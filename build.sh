@@ -45,7 +45,7 @@ if echo "$answer" | grep -iq "^y" ;then
 	cd /home/pi/lightshowpi
 	sudo ./install.sh
 	echo -ne '#############              (100%)\r'
-	echo "Completed"
+	echo "Completed. Please reboot with 'sudo reboot' "
 	
 else
     echo "Okay, maybe next time"

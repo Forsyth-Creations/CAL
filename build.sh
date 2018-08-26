@@ -42,7 +42,10 @@ if echo "$answer" | grep -iq "^y" ;then
 	cd lightshowpi
 	sleep 1
 	git fetch && git checkout stable
+	cd /home/pi/lightshowpi
+	sudo ./install.sh
 	echo -ne '#############              (100%)\r'
+	echo "Completed"
 	
 else
     echo "Okay, maybe next time"

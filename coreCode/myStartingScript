@@ -50,7 +50,7 @@ echo " "
 sleep 1
 echo "Making playlist from GitHub songs"
 cd /home/pi/lightshowpi/tools
-echo /home/pi/CAL/Music | python playlist_generator.py
+echo /home/pi/CAL/Music | python /home/pi/lightshowpi/tools/playlist_generator.py
 echo " "
 echo "Playlist was created"
 echo " "

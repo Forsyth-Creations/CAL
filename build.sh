@@ -29,6 +29,7 @@ if echo "$answer" | grep -iq "^y" ;then
 	sleep 1
 	
 	#Lightshowpi Installing
+	sudo apt-get install python-mutagen python3-mutagen
 	cd /home/pi/
 	echo -ne '##                          (12%)\r'
 	echo "Installing LightshowPi"

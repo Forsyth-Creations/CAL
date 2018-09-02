@@ -62,6 +62,8 @@ sleep 1
 echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
 cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &
 
-sleep 2
+sleep 8
 echo "All startup procedures have been run, and you're ready to go!"
-echo " " &
+echo " " 
+
+done

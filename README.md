@@ -4,5 +4,4 @@
 ## Parts of the CAL repo:
 	Blynk
 	Lightshowpi
-	WiringPi
 

@@ -65,5 +65,3 @@ cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &
 sleep 8
 echo "All startup procedures have been run, and you're ready to go!"
 echo " " 
-
-exit 0

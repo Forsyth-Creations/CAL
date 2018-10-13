@@ -59,10 +59,10 @@ echo " "
 
 sleep 1
 
-sudo killall blynk
-sleep 1
-echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
-cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &
+#sudo killall blynk
+#sleep 1
+#echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
+#cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &
 
 sleep 8
 echo "All startup procedures have been run, and you're ready to go!"

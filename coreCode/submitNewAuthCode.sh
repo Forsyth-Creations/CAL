@@ -7,7 +7,7 @@ fi
 echo "Thank you. Changing scripts now to match your Auth code"
 echo Your Auth Code is $in
 
-cd ~
+cd /home/pi/CAL/config
 truncate -s 0 authCode.txt
 echo $in  > authCode.txt
 

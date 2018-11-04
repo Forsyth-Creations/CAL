@@ -27,7 +27,7 @@ echo "Checking GitHub for Updates..."
 cd 
 echo " "
 cd /home/pi/CAL/
-git stash
+git clean -d -f 
 cd Music/	
 git pull 
 

@@ -1,0 +1,2 @@
+blynk_on = false
+lightshow_on = true

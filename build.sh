@@ -11,7 +11,7 @@ if echo "$answer" | grep -iq "^y" ;then
 	cd /home/pi/
 	sudo apt-get update && sudo apt-get upgrade
 	
-if [-d "$blynk-library" ]; then
+if [ ! -d "$blynk-library" ]; then
 	#BLYNK Install
 	echo "Installing Blynk"
 	echo -ne '                          (00%)\r'
@@ -30,7 +30,7 @@ if [-d "$blynk-library" ]; then
 	sleep 1
 fi
 
-if [-d "$lightshowpi" ]; then
+if [ ! -d "$lightshowpi" ]; then
 	#Lightshowpi Installing
 	sudo apt-get install python-mutagen python3-mutagen
 	cd /home/pi/

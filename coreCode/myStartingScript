@@ -27,7 +27,8 @@ echo "Checking GitHub for Updates..."
 cd 
 echo " "
 cd /home/pi/CAL/
-git clean -d -f 
+git fetch --all
+git reset --hard origin/master
 cd Music/	
 git pull 
 

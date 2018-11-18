@@ -1,2 +1,4 @@
+#Setting blynk_on to true will activate the Blynk library, with the authCode given in your config
 blynk_on = false
 lightshow_on = true
+

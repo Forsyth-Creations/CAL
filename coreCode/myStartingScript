@@ -67,4 +67,4 @@ sleep 1
 
 sleep 8
 echo "All startup procedures have been run, and you're ready to go!"
-echo " " 
+echo "\n" 

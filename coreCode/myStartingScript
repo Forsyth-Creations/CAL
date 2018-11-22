@@ -64,6 +64,26 @@ sleep 1
 #cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &
 #sleep 8
 
+#Getting Example Scripts Ready
+echo "Getting Example Scripts Ready"
+
+cd /home/pi/CAL/examples/CAL
+
+chmod +x allCalPinsOn.sh
+chmod +x allCalPinsOff.sh
+
+cd /home/pi/CAL/examples/CAL_JUNIOR
+
+chmod +x allCalJuniorPinsOn.sh
+chmod +x allCalJuniorPinsOff.sh
+
+cd /home/pi/CAL/examples/CAL_MINI
+
+chmod +x allCalMiniPinsOn.sh
+chmod +x allCalMiniPinsOff.sh
+
+cd 
+
 
 echo "All startup procedures have been run, and you're ready to go!"
 echo " "

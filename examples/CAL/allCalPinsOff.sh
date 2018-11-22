@@ -1,7 +1,5 @@
 #!/bin/bash
 
-function allOff {
-
 pinsUsed=(0 1 2 3 4 5 6 21) # Pins Used for the relay board, based on wiringPi specs
 
 for item in ${pinsUsed[*]} # For Every item in the pinsUsed list
@@ -13,5 +11,3 @@ do
 done
 
 exit
-
-}

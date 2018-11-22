@@ -47,6 +47,7 @@ if [ ! -d "$lightshowpi" ]; then
 	sleep 1
 	git fetch && git checkout stable
 	cd /home/pi/lightshowpi
+	sudo apt-get remove python-mutagen
 	sudo ./install.sh
 	echo -ne '#############              (100%)\r'
 	echo "Completed. Please reboot with 'sudo reboot' "

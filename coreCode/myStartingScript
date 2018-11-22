@@ -3,7 +3,7 @@
 #Starting Code for the CAL line of products
 #To run at startup. Just ./myStartingScript in your .bashrc file
 
-authCode=$(sed '' /home/pi/authCode.txt| xargs | sed 's/ /,/g')
+authCode=$(sed '' /home/pi/CAL/config/authCode.txt| xargs | sed 's/ /,/g')
 echo $authCode
 
 clear
@@ -15,11 +15,11 @@ echo "If you're a friend helping me re-work a failed"
 echo "code, I'm happy to have you. In whichever case,"
 echo "have a nice day, and happy coding! "
 echo " "
-echo "	    ____  ____"
-echo "	   /     /   /  /"
-echo "	  /     /---/  /"
-echo "	 /     /   /  /"
-echo "	 ---- /   /  /____"
+echo "     _______   ___   ___               "
+echo "    /  ____/  / _ \  \  \              "
+echo "   /  /      / /_\ \  \  \             "
+echo "  /  /___   /  / \  \  \  \___         "
+echo " /______/  /__/   \__\  \_____\   V.2  "
 echo " "
 echo "COMPUTER AUTOMATED LIGHTING"
 echo " "
@@ -32,11 +32,10 @@ git reset --hard origin/master
 cd Music/	
 git pull 
 
-
+#Getting Rid of Spaces
 cd /home/pi/CAL/Music
 echo " "
 echo "Getting rid of spaces"
-
 sleep 1
 find . -depth -name '* *' \
 | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
@@ -44,7 +43,6 @@ sleep 1
 
 cd
 echo " "
-
 #sleep 2
 #echo "Mounting USB..."
 #sudo mount /dev/sda1 usbDevice
@@ -69,4 +67,4 @@ sleep 1
 
 echo "All startup procedures have been run, and you're ready to go!"
 echo " "
-exit 0
+exit

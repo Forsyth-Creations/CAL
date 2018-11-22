@@ -56,3 +56,5 @@ else
     echo "Okay, maybe next time"
 	#sleep 1
 fi
+
+exit

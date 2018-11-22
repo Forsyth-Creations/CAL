@@ -67,6 +67,8 @@ sleep 1
 #Getting Example Scripts Ready
 echo "Getting Example Scripts Ready"
 
+examplePath='/home/pi/CAL/examples/'
+
 cd /home/pi/CAL/examples/CAL
 
 chmod +x allCalPinsOn.sh

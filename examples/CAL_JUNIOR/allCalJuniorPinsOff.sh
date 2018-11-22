@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pinsUsed=(4 1 16 15 #Pins Used for the relay board, based on wiringPi specs
+pinsUsed=(4 1 16 15) #Pins Used for the relay board, based on wiringPi specs
 
 for item in ${pinsUsed[*]} #For Every item in the pinsUsed list
 do

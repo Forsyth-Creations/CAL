@@ -67,4 +67,9 @@ sleep 1
 
 echo "All startup procedures have been run, and you're ready to go!"
 echo " "
+sleep 2
+
+
+
+done
 exit

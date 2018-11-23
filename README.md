@@ -8,7 +8,7 @@
 ![alt text](https://lh6.googleusercontent.com/ctYdGtYszsb3DZviTlMt2oIX_8KckbdP6get4y7c1AtzgQQgmFPM3zz5PCl-ixKv8BJNRM3BkRYBVkoet1LVjZ-XGqtB--tqVUN0r0Fhiv60Qh9Ai9c=w371)
 
 
-### Thing to Consider
+# Thing to Consider
 
 ## Add to end of .bashrc
 

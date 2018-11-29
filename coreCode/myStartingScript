@@ -6,6 +6,19 @@
 authCode=$(sed '' /home/pi/CAL/config/authCode.txt| xargs | sed 's/ /,/g')
 echo $authCode
 
+
+#Pull Latest code from github to run
+
+cd /home/pi/CAL/
+git fetch --all
+git reset --hard origin/master
+cd Music/	
+git pull 
+
+
+#begin main script
+
+
 clear
 cd
 echo " "
@@ -23,14 +36,11 @@ echo " /______/  /__/   \__\  \_____\   V.2  "
 echo " "
 echo "COMPUTER AUTOMATED LIGHTING"
 echo " "
-echo "Checking GitHub for Updates..."
+#echo "Checking GitHub for Updates..."
 cd 
 echo " "
-cd /home/pi/CAL/
-git fetch --all
-git reset --hard origin/master
-cd Music/	
-git pull 
+
+sleep 3
 
 #Getting Rid of Spaces
 cd /home/pi/CAL/Music

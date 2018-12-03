@@ -2,9 +2,7 @@
 
 pinsUsed=(4 1 16 15) #Pins Used for the relay board, based on wiringPi specs
 
-for item in ${pinsUsed[*]} #For Every item in the pinsUsed list
-
-#Turn all pins off to start
+for item in ${pinsUsed[*]} #Turn all pins off to start
 do
         gpio mode $item out #Set gpio pinMode to OUT
         gpio write $item 1 #Write low to the designated pin
@@ -12,7 +10,7 @@ do
 	#printf "   %s\n" $item #Lists item actived
 done
 
-#Turn them all on, one after another
+for item in ${pinsUsed[*]} #Turn them all on one after another
 do
         gpio mode $item out #Set gpio pinMode to OUT
         gpio write $item 0 #Write low to the designated pin
@@ -21,7 +19,7 @@ do
 		gpio write $item 1 #Write low to the designated pin
 done
 
-#turn all pins on
+for item in ${pinsUsed[*]} #turn all pins on
 do
         gpio mode $item out #Set gpio pinMode to OUT
         gpio write $item 0 #Write low to the designated pin

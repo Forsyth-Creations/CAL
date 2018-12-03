@@ -88,6 +88,7 @@ cd /home/pi/CAL/examples/CAL_JUNIOR
 
 chmod +x allOn.sh
 chmod +x allOff.sh
+chmod +x cycleThroughOutlets.sh
 
 cd /home/pi/CAL/examples/CAL_MINI
 

@@ -22,4 +22,4 @@ The second option is often the easiest to work with. Below is the code required 
 
 0 18 * * * cd /home/pi/CAL/examples/CAL_JUNIOR/ && ./allCalJuniorPinsOn.sh && cd >/dev/null 2>&1
 
-0 22 * * * cd /home/pi/CAL/examples/CAL_JUNIOR/ && ./allCalJuniorPinsOff.sh && cd >/dev/null 2>&1
+0 23 * * * cd /home/pi/CAL/examples/CAL_JUNIOR/ && ./allCalJuniorPinsOff.sh && cd >/dev/null 2>&1

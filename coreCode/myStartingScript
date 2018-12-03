@@ -81,18 +81,18 @@ examplePath='/home/pi/CAL/examples/'
 
 cd /home/pi/CAL/examples/CAL
 
-chmod +x allCalPinsOn.sh
-chmod +x allCalPinsOff.sh
+chmod +x allOn.sh
+chmod +x allOff.sh
 
 cd /home/pi/CAL/examples/CAL_JUNIOR
 
-chmod +x allCalJuniorPinsOn.sh
-chmod +x allCalJuniorPinsOff.sh
+chmod +x allOn.sh
+chmod +x allOff.sh
 
 cd /home/pi/CAL/examples/CAL_MINI
 
-chmod +x allCalMiniPinsOn.sh
-chmod +x allCalMiniPinsOff.sh
+chmod +x allOn.sh
+chmod +x allOff.sh
 
 cd 
 

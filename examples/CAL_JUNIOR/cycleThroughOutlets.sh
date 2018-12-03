@@ -8,16 +8,16 @@ for item in ${pinsUsed[*]} #For Every item in the pinsUsed list
 do
         gpio mode $item out #Set gpio pinMode to OUT
         gpio write $item 1 #Write low to the designated pin
-        #sleep 0.1 #Delay (If you want that)
-	#printf "   %s\n" $item #(Lists item actived)
+        #sleep 0.1 #Delay If you want that
+	#printf "   %s\n" $item #Lists item actived
 done
 
 #Turn them all on, one after another
 do
         gpio mode $item out #Set gpio pinMode to OUT
         gpio write $item 0 #Write low to the designated pin
-		printf "   %s\n" $item #(Lists item actived)
-        sleep 4 #Delay (If you want that)
+		printf "   %s\n" $item #Lists item actived
+        sleep 4 #Delay 
 		gpio write $item 1 #Write low to the designated pin
 done
 
@@ -25,8 +25,8 @@ done
 do
         gpio mode $item out #Set gpio pinMode to OUT
         gpio write $item 0 #Write low to the designated pin
-        #sleep 0.1 #Delay (If you want that)
-	#printf "   %s\n" $item #(Lists item actived)
+        #sleep 0.1 #Delay If you want that
+	#printf "   %s\n" $item #Lists item active
 done
 
 exit

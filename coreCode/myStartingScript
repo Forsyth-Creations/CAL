@@ -98,7 +98,7 @@ chmod +x allOff.sh
 cd 
 
 cd /home/pi/CAL/Debuging/
-chmod +x cycleAllPossilbeLights.sh
+chmod +x cycleAll.sh
 
 
 

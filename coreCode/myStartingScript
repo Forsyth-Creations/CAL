@@ -97,9 +97,12 @@ chmod +x allOff.sh
 
 cd 
 
+cd /home/pi/CAL/Debuging/
+chmod +x cycleAllPossilbeLights.sh
 
-echo "All startup procedures have been run, and you're ready to go!"
-echo "\n"
+
+
+echo "All startup procedures have been run, and you're ready to go! Type anything to exit"
 
 cd
 exit

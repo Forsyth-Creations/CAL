@@ -10,7 +10,7 @@
 
 ## Add to end of .bashrc
 
-cd /home/pi/CAL/coreCode/ && sudo ./CALinitialize.sh &
+cd /home/pi/CAL/coreCode/ && sudo bash ./CALinitialize.sh &
 
 ## Add to Crontab: Simple On and Off
 

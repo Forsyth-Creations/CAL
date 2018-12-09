@@ -97,7 +97,7 @@ chmod +x allOff.sh
 
 cd 
 
-cd /home/pi/CAL/Debuging/
+cd /home/pi/CAL/Debugging/
 chmod +x cycleAll.sh
 
 

@@ -95,6 +95,12 @@ cd /home/pi/CAL/examples/CAL_MINI
 chmod +x allOn.sh
 chmod +x allOff.sh
 
+cd /home/pi/CAL/lightshowCommands
+
+chmod +x beginShow.sh
+chmod +x stopShow.sh
+
+
 cd 
 
 cd /home/pi/CAL/Debugging/

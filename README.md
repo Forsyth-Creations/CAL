@@ -32,9 +32,9 @@ crontab -e
 
 The second option is often the easiest to work with. Below is the code required to copy/paste. Remember to change the directory/file name to properly address your hardware version:
 
-0 17 * * * start_music_and_lights >/dev/null 2>&1
+10 17 * * * $SYNCHRONIZED_LIGHTS_HOME/bin/start_music_and_lights >> $SYNCHRONIZED_LIGHTS_HOME/logs/music_and_lights.play 2>&1 &
 
-0 23 * * * stop_music_and_lights >/dev/null 2>&1
+00 23 * * * $SYNCHRONIZED_LIGHTS_HOME/bin/stop_music_and_lights >> $SYNCHRONIZED_LIGHTS_HOME/logs/music_and_lights.stop 2>&1 &
 
 ## Add A Reboot to properly update CAL 
 

@@ -92,13 +92,10 @@ while True:
 # Print key
 	  if instruction == 48 and instruction_inv == 207 :
 		print "Power"
-		ledonoff(int('20'))
 	  if instruction == 170 and instruction_inv == 85 :
 		print "Mute"
-		ledonoff(int('21'))
 	  if instruction == 144 and instruction_inv == 111 :
 		print "1"
-		ledonoff(int('16'))
 	  if instruction == 160 and instruction_inv == 95 :
 		print "2"
 	  if instruction == 128 and instruction_inv == 127 :
@@ -133,7 +130,6 @@ while True:
 		print "down"
 	  if instruction == 80 and instruction_inv == 175 :
 		print "OK"
-		ledonoff(int('12'))
 	  if instruction == 50 and instruction_inv == 205 :
 		print "left"
 	  if instruction == 2 and instruction_inv == 253 :
@@ -172,10 +168,15 @@ while True:
 		print "F2"
 	  if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
 		print "UP"
+		ledonoff(int('17'))
 	  if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here
 		print "DOWN"
+		ledonoff(int('23'))
 	  if instruction == 104 and instruction_inv == 151 : #Custom Stuff Here
 		print "LEFT"
+		ledonoff(int('15'))
 	  if instruction == 168 and instruction_inv == 87 : #Custom Stuff Here
 		print "RIGHT"
+		ledonoff(int('14'))
+
 GPIO.cleanup() 

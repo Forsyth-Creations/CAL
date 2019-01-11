@@ -5,10 +5,10 @@ import time
 
 #Define the GPIO
 INPUT_WIRE = 18
-LED1=12
-LED2=16
-LED3=20
-LED4=21
+LED1=17
+LED2=23
+LED3=15
+LED4=14
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
@@ -172,4 +172,12 @@ while True:
 		print "F1"
 	  if instruction == 0 and instruction_inv == 255 :
 		print "F2"
+	  if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
+		print "UP"
+	  if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here
+		print "DOWN"
+	  if instruction == 104 and instruction_inv == 151 : #Custom Stuff Here
+		print "LEFT"
+	  if instruction == 168 and instruction_inv == 87 : #Custom Stuff Here
+		print "RIGHT"
 GPIO.cleanup() 

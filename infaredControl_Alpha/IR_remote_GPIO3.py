@@ -125,8 +125,6 @@ while True:
 		print "MoSAic"
 	  if instruction == 24 and instruction_inv == 231 :
 		print "Sleep"
-	  if instruction == 40 and instruction_inv == 215 :
-		print "Audio"
 	  if instruction == 8 and instruction_inv == 247 :
 		print "INFO"
 	  if instruction == 34 and instruction_inv == 221 :

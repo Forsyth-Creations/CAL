@@ -154,8 +154,8 @@ while True:
 '''	 
 	 if instruction == 64 and instruction_inv == 191 :
 		#print "PR+"
-		ledonoff(int('23')) #2
-		ledonoff(int('17')) #1
+		ledonoff(int('23')) 
+		ledonoff(int('17')) 
 		ledonoff(int('15'))
 		ledonoff(int('14'))
 '''	 
@@ -174,16 +174,16 @@ while True:
 	  if instruction == 0 and instruction_inv == 255 :
 		#print "F2"
 '''	
-	if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
+	 if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
 		#print "UP"
 		ledonoff(int('17'))
-	  if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here
+	 if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here
 		#print "DOWN"
 		ledonoff(int('23'))
-	  if instruction == 104 and instruction_inv == 151 : #Custom Stuff Here
+	 if instruction == 104 and instruction_inv == 151 : #Custom Stuff Here
 		#print "LEFT"
 		ledonoff(int('15'))
-	  if instruction == 168 and instruction_inv == 87 : #Custom Stuff Here
+	 if instruction == 168 and instruction_inv == 87 : #Custom Stuff Here
 		#print "RIGHT"
 		ledonoff(int('14'))
 

@@ -106,10 +106,6 @@ cd
 cd /home/pi/CAL/Debugging/
 chmod +x cycleAll.sh
 
-#Begin IR Library
-cd /home/pi/CAL/infaredControl_Alpha/
-nohup ./IR_remote_GPIO3.py &
-
 
 echo "All startup procedures have been run, and you're ready to go! Type anything to exit"
 

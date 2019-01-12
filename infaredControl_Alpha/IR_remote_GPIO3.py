@@ -21,10 +21,10 @@ GPIO.setup(LED4,GPIO.OUT)
 #toggle the LED's
 def ledonoff(person):
     if GPIO.input(person)==0:
-	GPIO.output(person,False)
+	GPIO.output(person,True)
 	#sleep(.5)
     else:
-	GPIO.output(person,True)
+	GPIO.output(person,False)
 	#sleep(.5)
 
 #print ""

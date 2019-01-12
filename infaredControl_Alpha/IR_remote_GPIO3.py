@@ -68,7 +68,7 @@ while True:
 
 	#this part of the program prints to the screen the results
 #	if len(command) < 2 : print "REPEAT"
-	if len(command) < 2 : print ""
+	if len(command) < 2 : #print ""
 	elif len(command) == 32 :
 	  bit = 0b10000000
 	  address = 0
@@ -82,105 +82,105 @@ while True:
 		if command[position +24] : instruction_inv = instruction_inv | bit
 		bit = bit >> 1
 #Snif the remote 
-	  print "Big start bit = " + str(start_big)
-	  print "Byte 1 = " + str(address)
-	  print "Byte 2 = " + str(address_inv)
-	  print "Byte 3 = " + str(instruction)
-	  print "Byte 4 = " + str(instruction_inv) 
+	  #print "Big start bit = " + str(start_big)
+	  #print "Byte 1 = " + str(address)
+	  #print "Byte 2 = " + str(address_inv)
+	  #print "Byte 3 = " + str(instruction)
+	  #print "Byte 4 = " + str(instruction_inv) 
 
 # Codetabel voor VANTAGE X2-YC01N afstandsbediening
 # Print key
 	  if instruction == 48 and instruction_inv == 207 :
-		print "Power"
+		#print "Power"
 	  if instruction == 170 and instruction_inv == 85 :
-		print "Mute"
+		#print "Mute"
 	  if instruction == 144 and instruction_inv == 111 :
-		print "1"
+		#print "1"
 	  if instruction == 160 and instruction_inv == 95 :
-		print "2"
+		#print "2"
 	  if instruction == 128 and instruction_inv == 127 :
-		print "3"
+		#print "3"
 	  if instruction == 210 and instruction_inv == 45 :
-		print "4"
+		#print "4"
 	  if instruction == 226 and instruction_inv == 29 :
-		print "5"
+		#print "5"
 	  if instruction == 194 and instruction_inv == 61 :
-		print "6"
+		#print "6"
 	  if instruction == 82 and instruction_inv == 173 :
-		print "7"
+		#print "7"
 	  if instruction == 98 and instruction_inv == 157 :
-		print "8"
+		#print "8"
 	  if instruction == 66 and instruction_inv == 189 :
-		print "9"
+		#print "9"
 	  if instruction == 130 and instruction_inv == 125 :
-		print "0"
+		#print "0"
 	  if instruction == 88 and instruction_inv == 167 :
-		print "multimedia"
+		#print "multimedia"
 	  if instruction == 154 and instruction_inv == 101 :
-		print "Last"
+		#print "Last"
 	  if instruction == 56 and instruction_inv == 199 :
-		print "MoSAic"
+		#print "MoSAic"
 	  if instruction == 24 and instruction_inv == 231 :
-		print "Sleep"
+		#print "Sleep"
 	  if instruction == 8 and instruction_inv == 247 :
-		print "INFO"
+		#print "INFO"
 	  if instruction == 34 and instruction_inv == 221 :
-		print "up"
+		#print "up"
 	  if instruction == 18 and instruction_inv == 237 :
-		print "down"
+		#print "down"
 	  if instruction == 80 and instruction_inv == 175 :
-		print "OK"
+		#print "OK"
 	  if instruction == 50 and instruction_inv == 205 :
-		print "left"
+		#print "left"
 	  if instruction == 2 and instruction_inv == 253 :
-		print "right"
+		#print "right"
 	  if instruction == 192 and instruction_inv == 63 :
-		print "Menu"
+		#print "Menu"
 	  if instruction == 186 and instruction_inv == 69 :
-		print "EPG"
+		#print "EPG"
 	  if instruction == 96 and instruction_inv == 159 :
-		print "SAT"
+		#print "SAT"
 	  if instruction == 146 and instruction_inv == 109 :
-		print "Back"
+		#print "Back"
 	  if instruction == 176 and instruction_inv == 79 :
-		print "Vol+"
+		#print "Vol+"
 	  if instruction == 208 and instruction_inv == 47 :
-		print "Vol-"
+		#print "Vol-"
 	  if instruction == 218 and instruction_inv == 37 :
-		print "Page up"
+		#print "Page up"
 	  if instruction == 234 and instruction_inv == 21 :
-		print "Page down"
+		#print "Page down"
 	  if instruction == 64 and instruction_inv == 191 :
-		print "PR+"
-		ledonoff(int('17'))
-		ledonoff(int('23'))
+		#print "PR+"
+		ledonoff(int('23')) #2
+		ledonoff(int('17')) #1
 		ledonoff(int('15'))
 		ledonoff(int('14'))
 	  if instruction == 120 and instruction_inv == 135 :
-		print "PR-"
+		#print "PR-"
 	  if instruction == 162 and instruction_inv == 93 :
-		print "Text"
+		#print "Text"
 	  if instruction == 10 and instruction_inv == 245 :
-		print "Zoom"
+		#print "Zoom"
 	  if instruction == 58 and instruction_inv == 197 :
-		print "FAV"
+		#print "FAV"
 	  if instruction == 240 and instruction_inv == 15 :
-		print "F0"
+		#print "F0"
 	  if instruction == 112 and instruction_inv == 143 :
-		print "F1"
+		#print "F1"
 	  if instruction == 0 and instruction_inv == 255 :
-		print "F2"
+		#print "F2"
 	  if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
-		print "UP"
+		#print "UP"
 		ledonoff(int('17'))
 	  if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here
-		print "DOWN"
+		#print "DOWN"
 		ledonoff(int('23'))
 	  if instruction == 104 and instruction_inv == 151 : #Custom Stuff Here
-		print "LEFT"
+		#print "LEFT"
 		ledonoff(int('15'))
 	  if instruction == 168 and instruction_inv == 87 : #Custom Stuff Here
-		print "RIGHT"
+		#print "RIGHT"
 		ledonoff(int('14'))
 
 GPIO.cleanup() 

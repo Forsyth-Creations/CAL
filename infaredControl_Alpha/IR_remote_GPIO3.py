@@ -152,6 +152,10 @@ while True:
 		print "Page down"
 	  if instruction == 64 and instruction_inv == 191 :
 		print "PR+"
+		ledonoff(int('17'))
+		ledonoff(int('23'))
+		ledonoff(int('15'))
+		ledonoff(int('14'))
 	  if instruction == 120 and instruction_inv == 135 :
 		print "PR-"
 	  if instruction == 162 and instruction_inv == 93 :

@@ -18,6 +18,11 @@ GPIO.setup(LED2,GPIO.OUT)
 GPIO.setup(LED3,GPIO.OUT)
 GPIO.setup(LED4,GPIO.OUT)
 
+GPIO.output(17, 1)
+GPIO.output(23, 1)
+GPIO.output(14, 1)
+GPIO.output(15, 1)
+
 #toggle the LED's
 def ledonoff(person):
     if GPIO.input(person)==0:
@@ -26,11 +31,6 @@ def ledonoff(person):
     else:
 	GPIO.output(person,False)
 	sleep(.5)
-
-ledonoff(int('23'))
-ledonoff(int('17'))
-ledonoff(int('15'))
-ledonoff(int('14'))
 		
 #print ""
 #print "IR remote switch, Alpha Version"

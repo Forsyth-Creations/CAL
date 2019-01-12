@@ -66,10 +66,10 @@ while True:
 		if off_time.microseconds < 1000 : command.append(0)
 		else : command.append(1)
 
-	#this part of the program prints to the screen the results
-#	if len(command) < 2 : print "REPEAT"
-	#if len(command) < 2 : #print ""
-	if len(command) == 32 :
+	 #this part of the program prints to the screen the results
+	 #if len(command) < 2 : print "REPEAT"
+	 if len(command) < 2 : #print ""
+	 if len(command) == 32 :
 	  bit = 0b10000000
 	  address = 0
 	  address_inv = 0
@@ -81,7 +81,7 @@ while True:
 		if command[position +16] : instruction = instruction | bit
 		if command[position +24] : instruction_inv = instruction_inv | bit
 		bit = bit >> 1
-#Snif the remote 
+     #Snif the remote 
 	  #print "Big start bit = " + str(start_big)
 	  #print "Byte 1 = " + str(address)
 	  #print "Byte 2 = " + str(address_inv)
@@ -90,22 +90,22 @@ while True:
 
 # Codetabel voor VANTAGE X2-YC01N afstandsbediening
 # Print key
-if instruction == 64 and instruction_inv == 191 :
+	 if instruction == 64 and instruction_inv == 191 :
 		#print "PR+"
 		ledonoff(int('23')) 
 		ledonoff(int('17')) 
 		ledonoff(int('15'))
 		ledonoff(int('14'))
-if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
+	 if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
 		#print "UP"
 		ledonoff(int('17'))
-if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here
+	 if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here
 		#print "DOWN"
 		ledonoff(int('23'))
-if instruction == 104 and instruction_inv == 151 : #Custom Stuff Here
+	 if instruction == 104 and instruction_inv == 151 : #Custom Stuff Here
 		#print "LEFT"
 		ledonoff(int('15'))
-if instruction == 168 and instruction_inv == 87 : #Custom Stuff Here
+	 if instruction == 168 and instruction_inv == 87 : #Custom Stuff Here
 		#print "RIGHT"
 		ledonoff(int('14'))
 

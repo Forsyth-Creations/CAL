@@ -90,9 +90,10 @@ while True:
 
 # Codetabel voor VANTAGE X2-YC01N afstandsbediening
 # Print key
+'''
 	  if instruction == 48 and instruction_inv == 207 :
-		#print "Power"
-	  if instruction == 170 and instruction_inv == 85 :
+		#print "Power"	
+	if instruction == 170 and instruction_inv == 85 :
 		#print "Mute"
 	  if instruction == 144 and instruction_inv == 111 :
 		#print "1"
@@ -150,13 +151,15 @@ while True:
 		#print "Page up"
 	  if instruction == 234 and instruction_inv == 21 :
 		#print "Page down"
-	  if instruction == 64 and instruction_inv == 191 :
+'''	 
+	 if instruction == 64 and instruction_inv == 191 :
 		#print "PR+"
 		ledonoff(int('23')) #2
 		ledonoff(int('17')) #1
 		ledonoff(int('15'))
 		ledonoff(int('14'))
-	  if instruction == 120 and instruction_inv == 135 :
+'''	 
+	 if instruction == 120 and instruction_inv == 135 :
 		#print "PR-"
 	  if instruction == 162 and instruction_inv == 93 :
 		#print "Text"
@@ -170,7 +173,8 @@ while True:
 		#print "F1"
 	  if instruction == 0 and instruction_inv == 255 :
 		#print "F2"
-	  if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
+'''	
+	if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
 		#print "UP"
 		ledonoff(int('17'))
 	  if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here

@@ -174,7 +174,7 @@ while True:
 	  if instruction == 0 and instruction_inv == 255 :
 		#print "F2"
 '''	
-	 if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
+	if instruction == 200 and instruction_inv == 55 : #Custom Stuff Here
 		#print "UP"
 		ledonoff(int('17'))
 	 if instruction == 40 and instruction_inv == 215 : #Custom Stuff Here

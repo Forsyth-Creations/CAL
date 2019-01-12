@@ -68,8 +68,8 @@ while True:
 
 	#this part of the program #prints to the screen the results
 #	if len(command) < 2 : #print "REPEAT"
-	#if len(command) < 2 : #print ""
-	if len(command) == 32 :
+	if len(command) < 2 : print ""
+	elif len(command) == 32 :
 	  bit = 0b10000000
 	  address = 0
 	  address_inv = 0

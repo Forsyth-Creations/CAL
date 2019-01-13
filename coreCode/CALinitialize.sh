@@ -40,16 +40,16 @@ echo " "
 cd 
 echo " "
 
-sleep 3
+#sleep 3
 
 #Getting Rid of Spaces
 cd /home/pi/CAL/Music
 echo " "
 echo "Getting rid of spaces"
-sleep 1
+#sleep 1
 find . -depth -name '* *' \
 | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
-sleep 1
+#sleep 1
 
 cd
 echo " "
@@ -58,7 +58,7 @@ echo " "
 #sudo mount /dev/sda1 usbDevice
 #echo " "
 
-sleep 1
+#sleep 1
 echo "Making playlist from GitHub songs"
 cd /home/pi/lightshowpi/tools
 echo /home/pi/CAL/Music | python /home/pi/lightshowpi/tools/playlist_generator.py
@@ -66,7 +66,7 @@ echo " "
 echo "Playlist was created"
 echo " "
 
-sleep 1
+#sleep 1
 
 #sudo killall blynk
 #sleep 1

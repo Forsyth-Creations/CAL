@@ -27,10 +27,10 @@ GPIO.output(15, 1)
 def ledonoff(person):
     if GPIO.input(person)==0:
 	GPIO.output(person,True)
-	sleep(.5)
+	sleep(.2)
     else:
 	GPIO.output(person,False)
-	sleep(.5)
+	sleep(.2)
 		
 #print ""
 #print "IR remote switch, Alpha Version"

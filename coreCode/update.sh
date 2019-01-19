@@ -7,4 +7,4 @@
 #echo "Update Complete"
 
 #UPDATE V2
-git pull origin/master
+git pull origin

@@ -1,0 +1,7 @@
+# Ignore config files (only sync defaults to avoid synching personal setups)
+
+authCode.txt
+settings.txt
+
+#overrides.cfg
+

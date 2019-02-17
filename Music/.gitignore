@@ -1,4 +1,4 @@
 # Ignore config files (only sync defaults to avoid synching personal setups)
 
-overrides.cfg
+.playlist
 

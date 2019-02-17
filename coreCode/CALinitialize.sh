@@ -74,7 +74,7 @@ echo " "
 #sleep 1
 
 sudo killall blynk
-#sleep 1
+sleep 2
 echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
 #echo "Running Blynk"
 cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &

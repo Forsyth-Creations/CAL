@@ -9,7 +9,7 @@
 cd /home/pi/CAL/config
 authCode=$(sed -n '4p' < overrides.cfg)
 #authCode=$(sed '4p' /home/pi/CAL/config/overrides.cfg| xargs | sed 's/ /,/g')
-echo ${authCode:10}
+echo ${authCode:9}
 
 
 #Pull Latest code from github to run
@@ -73,10 +73,11 @@ echo " "
 
 #sleep 1
 
-#sudo killall blynk
+sudo killall blynk
 #sleep 1
-#echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
-#cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &
+echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
+#echo "Running Blynk"
+cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &
 #sleep 8
 
 #Getting Example Scripts Ready

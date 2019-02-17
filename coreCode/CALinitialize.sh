@@ -3,8 +3,13 @@
 #Starting Code for the CAL line of products
 #To run at startup. Just ./myStartingScript in your .bashrc file
 
-authCode=$(sed '' /home/pi/CAL/config/authCode.txt| xargs | sed 's/ /,/g')
-echo $authCode
+#authCode=$(sed '' /home/pi/CAL/config/authCode.txt| xargs | sed 's/ /,/g')
+#echo $authCode
+
+cd /home/pi/CAL/config
+authCode=$(sed -n '4p' < overrides.cfg)
+#authCode=$(sed '4p' /home/pi/CAL/config/overrides.cfg| xargs | sed 's/ /,/g')
+echo ${authCode:10}
 
 
 #Pull Latest code from github to run

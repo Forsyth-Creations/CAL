@@ -14,8 +14,8 @@ authCode=${authCode:9}
 
 blynkActivationState=$(sed -n '2p' < overrides.cfg)
 lightshowActivationState=$(sed -n '3p' < overrides.cfg)
-blynkActivationState=${blynkActivationState:8}
-lightshowActivationState=${lightshowActivationState:12}
+blynkActivationState=${blynkActivationState:9}
+lightshowActivationState=${lightshowActivationState:13}
 echo $blynkActivationState
 echo $lightshowActivationState
 
@@ -80,13 +80,12 @@ echo " "
 
 sudo killall blynk
 sleep 2
-echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
 #echo "Running Blynk"
 
 if [ $blynkActivationState = "true" ] || [ $blynkActivationState = "True" ]
 then
-cd /home/pi/blynk-library/linux/ && ./blynk --token=$authCode &
-echo "Running Blynk"
+	echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
+	cd /home/pi/blynk-library/linux/ && ./blynk --token=$authCode &
 fi
 #sleep 8
 

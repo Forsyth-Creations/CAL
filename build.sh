@@ -50,10 +50,11 @@ if [ ! -d "$lightshowpi" ]; then
 	sudo apt-get remove python-mutagen
 	sudo ./install.sh
 	echo -ne '#############              (100%)\r'
-	echo "Completed. Please reboot with 'sudo reboot' "
 fi	
 	cd
 	sudo apt-get install w3m
+	sudo pip install sh
+	echo "Completed. Please reboot with 'sudo reboot' "
 
 else
     echo "Okay, maybe next time"

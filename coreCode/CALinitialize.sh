@@ -96,30 +96,30 @@ examplePath='/home/pi/CAL/examples/'
 
 cd /home/pi/CAL/examples/CAL
 
-chmod +x allOn.sh
-chmod +x allOff.sh
+#chmod +x allOn.sh
+#chmod +x allOff.sh
 
 cd /home/pi/CAL/examples/CAL_JUNIOR
 
-chmod +x allOn.sh
-chmod +x allOff.sh
-chmod +x cycleThroughOutlets.sh
+#chmod +x allOn.sh
+#chmod +x allOff.sh
+#chmod +x cycleThroughOutlets.sh
 
 cd /home/pi/CAL/examples/CAL_MINI
 
-chmod +x allOn.sh
-chmod +x allOff.sh
+#chmod +x allOn.sh
+#chmod +x allOff.sh
 
 cd /home/pi/CAL/lightshowCommands
 
-chmod +x beginShow.sh
-chmod +x stopShow.sh
+#chmod +x beginShow.sh
+#chmod +x stopShow.sh
 
 
 cd 
 
 cd /home/pi/CAL/Debugging/
-chmod +x cycleAll.sh
+#chmod +x cycleAll.sh
 
 
 echo "All startup procedures have been run, and you're ready to go! Type anything to exit"

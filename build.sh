@@ -52,6 +52,8 @@ if [ ! -d "$lightshowpi" ]; then
 	echo -ne '#############              (100%)\r'
 	echo "Completed. Please reboot with 'sudo reboot' "
 fi	
+	cd
+	sudo apt-get install w3m
 
 else
     echo "Okay, maybe next time"

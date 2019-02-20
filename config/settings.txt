@@ -8,3 +8,4 @@ CALtype=JUNIOR
 hardwareDesignation=SSR 
 email=myemail@fake.com
 emailPassword=password
+autoUpdate=on

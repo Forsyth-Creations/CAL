@@ -2,3 +2,9 @@
 blynk_on=false
 lightshow_on=true
 authCode=00000000000000000
+#Either PRO, JUNIOR, or MINI
+CALtype=JUNIOR 
+#Either SSR or LSR for the Hardware designation
+hardwareDesignation=SSR 
+email=myemail@fake.com
+emailPassword=password

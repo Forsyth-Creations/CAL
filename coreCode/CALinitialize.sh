@@ -16,33 +16,33 @@ blynkActivationState=$(sed -n '2p' < overrides.cfg)
 lightshowActivationState=$(sed -n '3p' < overrides.cfg)
 blynkActivationState=${blynkActivationState:9}
 lightshowActivationState=${lightshowActivationState:13}
-echo $blynkActivationState
-echo $lightshowActivationState
+#echo $blynkActivationState
+#echo $lightshowActivationState
 
 #Pull Latest code from github to run
 
-cd /home/pi/CAL/
-git fetch --all
-git reset --hard origin/master
-cd Music/	
-git pull 
+#cd /home/pi/CAL/
+#git fetch --all
+#git reset --hard origin/master
+#cd Music/	
+#git pull 
 
 #begin main script
 
 clear
 cd
 echo " "
-echo 'To whomever may have accessed my lightshow system.'
-echo "Welcome! If you're a hacker, you're not welcome"
-echo "If you're a friend helping me re-work a failed"
-echo "code, I'm happy to have you. In whichever case,"
-echo "have a nice day, and happy coding! "
+#echo 'To whomever may have accessed my lightshow system.'
+#echo "Welcome! If you're a hacker, you're not welcome"
+#echo "If you're a friend helping me re-work a failed"
+#echo "code, I'm happy to have you. In whichever case,"
+#echo "have a nice day, and happy coding! "
 echo " "
 echo "     _______   ___   ___               "
 echo "    /  ____/  / _ \  \  \              "
 echo "   /  /      / /_\ \  \  \             "
 echo "  /  /___   /  / \  \  \  \___         "
-echo " /______/  /__/   \__\  \_____\   V.3  "
+echo " /______/  /__/   \__\  \_____\   V.4  "
 echo " "
 echo "COMPUTER AUTOMATED LIGHTING"
 echo " "

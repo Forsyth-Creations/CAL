@@ -54,6 +54,7 @@ fi
 	cd
 	sudo apt-get install w3m
 	sudo pip install sh
+	sudo pip install geocoder
 	echo "Completed. Please reboot with 'sudo reboot' "
 
 else

@@ -35,7 +35,7 @@ def ProcessFetch(char, stdin):
 
 if __name__ == "__main__":
     checkTimeSec = 60
-    gitDir = "/var/testupdate/"
+    gitDir = "/home/pi/CAL"
     while True:
         print("*********** Checking for code update **************")                                                     
     

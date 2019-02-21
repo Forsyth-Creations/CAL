@@ -1,8 +1,10 @@
 public class CAL {
-
     public static void main(String[] args) {
-        // Prints "Hello, World" to the terminal window.
-        System.out.println("Hello, World");
+		System.out.println("     _______   ___   ___               ");
+		System.out.println("    /  ____/  / _ \  \  \              ");
+		System.out.println("   /  /      / /_\ \  \  \             ");
+		System.out.println("  /  /___   /  / \  \  \  \___         ");
+		System.out.println(" /______/  /__/   \__\  \_____\   V.4  ");
     }
 
 }

@@ -32,7 +32,7 @@ cd /home/pi/CAL/Music
 echo " "
 echo "Getting rid of spaces"
 #sleep 1
-find . -depth -name '* *' \ 
+find . -depth -name '* *' \
 | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
 #sleep 1
 

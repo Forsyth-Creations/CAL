@@ -29,7 +29,8 @@ echo " "
 cd /home/pi/CAL/Music
 echo " "
 #echo "Getting rid of spaces"
-echo -ne '####################(100%) Getting rid of spaces           \r'
+echo -ne '                     (0%) Getting rid of spaces           \r'
+sleep 1
 find . -depth -name '* *' \
 | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
 cd
@@ -40,10 +41,12 @@ cd
 #--------Make Playlist from Songs------------------
 #echo "Making playlist from GitHub songs"
 echo -ne '####               (20%) Making playlist from GitHub songs\r'
+sleep 1
 cd /home/pi/lightshowpi/tools
 echo /home/pi/CAL/Music | python /home/pi/lightshowpi/tools/playlist_generator.py &> /dev/null &
 #echo "Playlist was created"
 echo -ne '########           (40%) Playlist was created             \r'
+sleep 1
 #--------Kill All Blynk Scripts--------------------
 sudo killall blynk
 sleep 2
@@ -55,7 +58,7 @@ then
 	echo -ne '############    (60%) Running Blynk                    \r'
 	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
 fi
-echo -ne '####################(100%)                                   '
+echo -ne '####################(100%)                                   \n'
 echo "You're all ready to go!"
 exit
 

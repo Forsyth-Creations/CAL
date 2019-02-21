@@ -29,6 +29,7 @@ echo " "
 cd /home/pi/CAL/Music
 echo " "
 echo "Getting rid of spaces"
+echo -ne '#############              (50%)\r'
 find . -depth -name '* *' \
 | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
 cd
@@ -38,11 +39,10 @@ cd
 #echo " "
 #--------Make Playlist from Songs------------------
 echo "Making playlist from GitHub songs"
+echo -ne '#############              (75%)\r'
 cd /home/pi/lightshowpi/tools
 echo /home/pi/CAL/Music | python /home/pi/lightshowpi/tools/playlist_generator.py &> /dev/null &
-echo " "
 echo "Playlist was created"
-echo " "
 #--------Kill All Blynk Scripts--------------------
 sudo killall blynk
 sleep 2
@@ -53,5 +53,6 @@ then
 	echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
 	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
 fi
+echo "You're all ready to go!"
 exit
 

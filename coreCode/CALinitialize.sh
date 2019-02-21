@@ -39,11 +39,11 @@ cd
 #echo " "
 #--------Make Playlist from Songs------------------
 #echo "Making playlist from GitHub songs"
-echo -ne '####################(100%) Making playlist from GitHub songs\r'
+echo -ne '####               (20%) Making playlist from GitHub songs\r'
 cd /home/pi/lightshowpi/tools
 echo /home/pi/CAL/Music | python /home/pi/lightshowpi/tools/playlist_generator.py &> /dev/null &
 #echo "Playlist was created"
-echo -ne '####################(100%) Playlist was created\r'
+echo -ne '########           (40%) Playlist was created\r'
 #--------Kill All Blynk Scripts--------------------
 sudo killall blynk
 sleep 2
@@ -52,10 +52,10 @@ sleep 2
 if [ $blynkActivationState = "true" ] || [ $blynkActivationState = "True" ]
 then
 	#echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
-	echo -ne '####################(100%) Running Blynk            \r'
+	echo -ne '############    (60%) Running Blynk            \r'
 	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
 fi
-echo -ne '####################(100%)\r'
+echo -ne '####################(100%)'
 echo "You're all ready to go!"
 exit
 

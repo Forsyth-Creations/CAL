@@ -1,23 +1,12 @@
 #!/bin/bash
 
-#Starting Code for the CAL line of products
-#To run at startup. Just ./myStartingScript in your .bashrc file
-
-#authCode=$(sed '' /home/pi/CAL/config/authCode.txt| xargs | sed 's/ /,/g')
-#echo $authCode
-
 cd /home/pi/CAL/config
 authCode=$(sed -n '4p' < overrides.cfg)
-#authCode=$(sed '4p' /home/pi/CAL/config/overrides.cfg| xargs | sed 's/ /,/g')
-#echo ${authCode:9}
 authCode=${authCode:9}
-
 blynkActivationState=$(sed -n '2p' < overrides.cfg)
 lightshowActivationState=$(sed -n '3p' < overrides.cfg)
 blynkActivationState=${blynkActivationState:9}
 lightshowActivationState=${lightshowActivationState:13}
-#echo $blynkActivationState
-#echo $lightshowActivationState
 
 #Pull Latest code from github to run
 
@@ -27,16 +16,7 @@ lightshowActivationState=${lightshowActivationState:13}
 #cd Music/	
 #git pull 
 
-#begin main script
-
-clear
 cd
-echo " "
-#echo 'To whomever may have accessed my lightshow system.'
-#echo "Welcome! If you're a hacker, you're not welcome"
-#echo "If you're a friend helping me re-work a failed"
-#echo "code, I'm happy to have you. In whichever case,"
-#echo "have a nice day, and happy coding! "
 echo " "
 echo "     _______   ___   ___               "
 echo "    /  ____/  / _ \  \  \              "
@@ -44,13 +24,8 @@ echo "   /  /      / /_\ \  \  \             "
 echo "  /  /___   /  / \  \  \  \___         "
 echo " /______/  /__/   \__\  \_____\   V.4  "
 echo " "
-echo "COMPUTER AUTOMATED LIGHTING"
-echo " "
-#echo "Checking GitHub for Updates..."
-cd 
 echo " "
 
-#sleep 3
 
 #Getting Rid of Spaces
 cd /home/pi/CAL/Music
@@ -58,7 +33,7 @@ echo " "
 echo "Getting rid of spaces"
 #sleep 1
 find . -depth -name '* *' \
-| while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
+| while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; &> /dev/null & done
 #sleep 1
 
 cd
@@ -90,7 +65,7 @@ fi
 #sleep 8
 
 #Getting Example Scripts Ready
-echo "Getting Example Scripts Ready"
+#echo "Getting Example Scripts Ready"
 
 examplePath='/home/pi/CAL/examples/'
 
@@ -121,7 +96,7 @@ cd
 cd /home/pi/CAL/Debugging/
 #chmod +x cycleAll.sh
 
-
+echo " "
 echo "All startup procedures have been run, and you're ready to go! Type anything to exit"
 
 cd

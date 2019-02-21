@@ -85,7 +85,7 @@ sleep 2
 if [ $blynkActivationState = "true" ] || [ $blynkActivationState = "True" ]
 then
 	echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
-	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null
+	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
 fi
 #sleep 8
 

@@ -46,7 +46,7 @@ echo " "
 #sleep 1
 echo "Making playlist from GitHub songs"
 cd /home/pi/lightshowpi/tools
-echo /home/pi/CAL/Music | python /home/pi/lightshowpi/tools/playlist_generator.py
+echo /home/pi/CAL/Music | python /home/pi/lightshowpi/tools/playlist_generator.py &> /dev/null &
 echo " "
 echo "Playlist was created"
 echo " "
@@ -97,7 +97,7 @@ cd /home/pi/CAL/Debugging/
 #chmod +x cycleAll.sh
 
 echo " "
-echo "All startup procedures have been run, and you're ready to go! Type anything to exit"
+echo "All startup procedures have been run, and youre ready to go! Type anything to exit"
 
 cd
 ' 

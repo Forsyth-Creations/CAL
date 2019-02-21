@@ -23,11 +23,11 @@ echo "   /  /      / /_\ \  \  \             "
 echo "  /  /___   /  / \  \  \  \___         "
 echo " /______/  /__/   \__\  \_____\   V.4  "
 echo " "
-echo " "
+#echo " "
 
 #----------Getting Rid of Spaces------------------
 cd /home/pi/CAL/Music
-echo " "
+#echo " "
 #echo "Getting rid of spaces"
 echo -ne '                     (0%) Getting rid of spaces           \r'
 sleep 1

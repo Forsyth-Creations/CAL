@@ -28,8 +28,8 @@ echo " "
 #----------Getting Rid of Spaces------------------
 cd /home/pi/CAL/Music
 echo " "
-echo "Getting rid of spaces"
-echo -ne '#############              (50%)\r'
+#echo "Getting rid of spaces"
+echo -ne '####################(100%) Getting rid of spaces\r'
 find . -depth -name '* *' \
 | while IFS= read -r f ; do mv -i "$f" "$(dirname "$f")/$(basename "$f"|tr ' ' _)" ; done
 cd
@@ -38,11 +38,12 @@ cd
 #sudo mount /dev/sda1 usbDevice
 #echo " "
 #--------Make Playlist from Songs------------------
-echo "Making playlist from GitHub songs"
-echo -ne '#############              (75%)\r'
+#echo "Making playlist from GitHub songs"
+echo -ne '####################(100%) Making playlist from GitHub songs\r'
 cd /home/pi/lightshowpi/tools
 echo /home/pi/CAL/Music | python /home/pi/lightshowpi/tools/playlist_generator.py &> /dev/null &
-echo "Playlist was created"
+#echo "Playlist was created"
+echo -ne '####################(100%) Playlist was created\r'
 #--------Kill All Blynk Scripts--------------------
 sudo killall blynk
 sleep 2
@@ -50,9 +51,11 @@ sleep 2
 #------------Activate Blynk-----------------------
 if [ $blynkActivationState = "true" ] || [ $blynkActivationState = "True" ]
 then
-	echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
+	#echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
+	echo -ne '####################(100%) Running Blynk            \r'
 	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
 fi
+echo -ne '####################(100%)\r'
 echo "You're all ready to go!"
 exit
 

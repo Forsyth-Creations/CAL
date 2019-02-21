@@ -57,6 +57,7 @@ then
 	#echo "Running Blynk for this unit. Please change Auth code if CAL installed on new unit"
 	echo -ne '############    (60%) Running Blynk                    \r'
 	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
+	sleep 1
 fi
 echo -ne '####################(100%)                                   \n'
 echo "You're all ready to go!"

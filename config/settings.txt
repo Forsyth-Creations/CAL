@@ -5,7 +5,12 @@ authCode=00000000000000000
 #Either PRO, JUNIOR, or MINI
 CALtype=JUNIOR 
 #Either SSR or LSR for the Hardware designation
-hardwareDesignation=SSR 
+hardwareDesignation=SSR
+#Pins normally high or low
+pinsActiveHigh=false
 email=myemail@fake.com
 emailPassword=password
 autoUpdate=on
+pinsUsed=4 1 16 15
+
+

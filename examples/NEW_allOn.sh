@@ -19,9 +19,9 @@ do
 	    printf "Lights Turned Off\n"
         if [ $pinsState == 1 ]
         then
-            pinsState= 0
+            pinsState=0
        else
-	        pinsState= 1
+	        pinsState=1
         fi
     fi
 done

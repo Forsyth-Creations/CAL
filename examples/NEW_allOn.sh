@@ -21,10 +21,10 @@ do
        then
            pinsState= 0
        else
-	   pinsState= 1
+	        pinsState= 1
+        fi
     fi
 done
-
 
 #pinsUsed=(4 1 16 15) #Pins Used for the relay board, based on wiringPi specs
 

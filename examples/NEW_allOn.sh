@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /home/pi/CAL/config
 pinsUsed=$(sed -n '14p' < overrides.cfg)
 pinsUsed=${pinsUsed:9}
 

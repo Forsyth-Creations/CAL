@@ -14,10 +14,10 @@ for arg in "$@"
 do
     if [ "$arg" == "on" ] || [ "$arg" == "ON" ]
     then
-        echo "Lights Turned On"
+        echo "Lights Turned On\n"
     else
-	echo "Lights Turned Off"
-       if [ pinsState= == 1 ]
+	printf "Lights Turned Off\n"
+       if [ pinsState == 1 ]
        then
            pinsState= 0
        else
@@ -26,7 +26,7 @@ do
     fi
 done
 
-printf $pinsState
+printf $pinsState "\n"
 
 #pinsUsed=(4 1 16 15) #Pins Used for the relay board, based on wiringPi specs
 

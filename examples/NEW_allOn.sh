@@ -17,7 +17,7 @@ do
         printf "Lights Turned On\n"
     else
 	    printf "Lights Turned Off\n"
-        if [ pinsState == 1 ]
+        if [ $pinsState == 1 ]
         then
             pinsState= 0
        else
@@ -26,7 +26,7 @@ do
     fi
 done
 
-printf $pinsState "\n"
+printf "State is set to: %s\n" $pinsState 
 
 #pinsUsed=(4 1 16 15) #Pins Used for the relay board, based on wiringPi specs
 

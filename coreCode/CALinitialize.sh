@@ -9,9 +9,10 @@ blynkActivationState=${blynkActivationState:9}
 lightshowActivationState=${lightshowActivationState:13}
 
 #Pull Latest code from github to run
-#cd /home/pi/CAL/
-#git fetch --all
-#git reset --hard origin/master
+cd /home/pi/CAL/
+git fetch --all
+git reset --hard origin/master
+git pull origin
 #cd Music/	
 #git pull 
 

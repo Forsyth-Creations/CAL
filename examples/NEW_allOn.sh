@@ -14,12 +14,12 @@ for arg in "$@"
 do
     if [ "$arg" == "on" ] || [ "$arg" == "ON" ]
     then
-        echo "Lights Turned On\n"
+        printf "Lights Turned On\n"
     else
-	printf "Lights Turned Off\n"
-       if [ pinsState == 1 ]
-       then
-           pinsState= 0
+	    printf "Lights Turned Off\n"
+        if [ pinsState == 1 ]
+        then
+            pinsState= 0
        else
 	        pinsState= 1
         fi

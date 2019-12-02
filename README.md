@@ -42,26 +42,14 @@ The second option is often the easiest to work with. Below is the code required 
 
 ## Alternate Configuration
 
-0 17 * * * cd /home/pi/CAL/lightshowCommands/ && ./beginShow >/dev/null 2>&1
+0 17 * * * cd /home/pi/CAL/examples/ && bash setLights.sh on && cd >/dev/null 2>&1
 
-0 18 * * * cd /home/pi/CAL/lightshowCommands/ && ./stopShow && cd /home/pi/CAL/examples/CAL/ && ./allOn.sh >/dev/null 2>&1
-02 18 * * * cd /home/pi/CAL/lightshowCommands/ && ./beginShow >/dev/null 2>&1
+0 23 * * * cd /home/pi/CAL/examples/ && bash setLights.sh off && cd >/dev/null 2>&1
 
-0 19 * * * cd /home/pi/CAL/lightshowCommands/ && ./stopShow && cd /home/pi/CAL/examples/CAL/ && ./allOn.sh >/dev/null 2>&1
-02 19 * * * cd /home/pi/CAL/lightshowCommands/ && ./beginShow >/dev/null 2>&1
+@reboot python /home/pi/CAL/infaredControl_Alpha/IR_remote_GPIO3.py
+@reboot sudo bash /home/pi/CAL/coreCode/CALinitialize.sh
 
-0 20 * * * cd /home/pi/CAL/lightshowCommands/ && ./stopShow && cd /home/pi/CAL/examples/CAL/ && ./allOn.sh >/dev/null 2>&1
-02 20 * * * cd /home/pi/CAL/lightshowCommands/ && ./beginShow >/dev/null 2>&1
-
-0 21 * * * cd /home/pi/CAL/lightshowCommands/ && ./stopShow && cd /home/pi/CAL/examples/CAL/ && ./allOn.sh >/dev/null 2>&1
-02 21 * * * cd /home/pi/CAL/lightshowCommands/ && ./beginShow >/dev/null 2>&1
-
-0 22 * * * cd /home/pi/CAL/lightshowCommands/ && ./stopShow && cd /home/pi/CAL/examples/CAL/ && ./allOn.sh >/dev/null 2>&1
-02 22 * * * cd /home/pi/CAL/lightshowCommands/ && ./beginShow >/dev/null 2>&1
-
-0 23 * * * cd /home/pi/CAL/lightshowCommands/ && ./stopShow && cd /home/pi/CAL/examples/CAL/ && ./allOff.sh >/dev/null 2>&1
-
-10 23 * * * sudo reboot >/dev/null 2>&1
+05 23 * * * sudo reboot >/dev/null 2>&1
 
 
 

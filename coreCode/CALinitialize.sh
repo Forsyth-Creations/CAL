@@ -4,9 +4,8 @@ cd /home/pi/CAL/config/
 FILE=overrides.cfg
 if test -f "$FILE"; 
 then
-    #printf "$FILE exist. Using $FILE for settings\n"
+    printf "\n"
 else
-	#printf "$FILE doesn't exist. Using settings.txt for settings\n"
     FILE=settings.txt
 fi
 

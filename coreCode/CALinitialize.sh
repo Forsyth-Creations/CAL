@@ -19,7 +19,7 @@ blynkActivationState=${blynkActivationState:9}
 lightshowActivationState=${lightshowActivationState:13}
 
 activateAutoUpdate=$(sed -n '13p' < $FILE)
-lightshowActivationState=${activateAutoUpdate:11}
+activateAutoUpdate=${activateAutoUpdate:11}
 
 #Pull Latest code from github to run
 cd /home/pi/CAL/
@@ -71,7 +71,8 @@ if [ $activateAutoUpdate = "on" ] || [ $activateAutoUpdate = "On" ]
 then
 	echo -ne '############    (50%) Activating Auto Update           \r'
 	cd /home/pi/CAL/coreCode/
-	python autoUpdate.py &
+	python autoUpdate.py >/dev/null 2>&1 &
+	sleep 1
 fi
 
 #------------Activate Blynk-----------------------

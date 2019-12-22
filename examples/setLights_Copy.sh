@@ -25,7 +25,7 @@ do
         if [ "$lightShowState" == "true" ] || [ "$lightShowState" == "True" ] 
         then
             #turn the light show on if its supposed to be active
-            printf "Starting LIGHTSHOWPI"
+            printf "Starting LIGHTSHOWPI \n"
             cd $SYNCHRONIZED_LIGHTS_HOME/bin/ && ./start_music_and_lights >/dev/null 2>&1
             exit 0
         fi
@@ -34,7 +34,7 @@ do
         if [ "$lightShowState" == true ] || [ "$lightShowState" == "True" ] 
         then
             #turn the light show off if its supposed to be active
-            printf "Stopping LIGHTSHOWPI"
+            printf "Stopping LIGHTSHOWPI \n"
             cd $SYNCHRONIZED_LIGHTS_HOME/bin/ && ./stop_music_and_lights >/dev/null 2>&1
         fi
 

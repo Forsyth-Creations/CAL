@@ -54,8 +54,8 @@ for item in ${pinsUsed[*]} #For Every item in the pinsUsed list
 do
         gpio mode $item out #Set gpio pinMode to OUT
         gpio write $item $pinsState #Turn the designated pin on
-        sleep 0.2 #Delay (If you want that)
-	    printf "   %s\n" $item #(Lists item actived)
+        #sleep 0.2 #Delay (If you want that)
+	    #printf "   %s\n" $item #(Lists item actived)
 done
 
 exit 0

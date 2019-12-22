@@ -7,7 +7,7 @@ CALtype=JUNIOR
 #Either SSR or LSR for the Hardware designation
 hardwareDesignation=SSR
 #Pins normally high or low
-pinsActiveHigh=0 #Either 0 or 1 depending on designation
+pinsActiveHigh=0
 email=myemail@fake.com
 emailPassword=password
 autoUpdate=on

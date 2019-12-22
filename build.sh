@@ -56,6 +56,7 @@ fi
 	sudo pip install sh
 	sudo pip install geocoder
 	echo "Completed. Please reboot with 'sudo reboot' "
+	echo "Thank you for using the CAL Smart Outlet Library"
 
 else
     echo "Okay, maybe next time"

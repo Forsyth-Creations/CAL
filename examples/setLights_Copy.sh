@@ -1,13 +1,23 @@
 #!/bin/bash
 
 cd /home/pi/CAL/config
-pinsUsed=$(sed -n '14p' < overrides.cfg)
+
+FILE=overrides.cfg
+if test -f "$FILE"; 
+then
+    printf "$FILE exist. Using $FILE for settings"
+else
+    printf "$FILE doesn't exist. Using settings.txt for settings"
+    FILE=settings.txt
+fi
+
+pinsUsed=$(sed -n '14p' < $FILE)
 pinsUsed=${pinsUsed:9}
 
-pinsState=$(sed -n '10p' < overrides.cfg)
+pinsState=$(sed -n '10p' < $FILE)
 pinsState=${pinsState:15}
 
-lightShowState=$(sed -n '3p' < overrides.cfg)
+lightShowState=$(sed -n '3p' < $FILE)
 lightShowState=${lightShowState:13}
 
 SYNCHRONIZED_LIGHTS_HOME=/home/pi/lightshowpi

@@ -17,7 +17,8 @@ printf "Lightshowpi, based on config, is: %s\n" $lightShowState
 
 for arg in "$@"
 do
-    if [ "$arg" == "on" ] || [ "$arg" == "ON" ] then
+    if [ "$arg" == "on" ] || [ "$arg" == "ON" ] 
+    then
         printf "Lights Turned On\n"
         echo "im here"
         #if the lightshow preference is true, activate and exit code

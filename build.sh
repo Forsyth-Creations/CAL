@@ -7,7 +7,18 @@ read answer
 
 if echo "$answer" | grep -iq "^y" ;then
     echo "Good choice! The install will being shortly"
-    sleep 3
+	cd /home/pi/CAL/config/
+
+	FILE=overrides.cfg
+	if test -f "$FILE"; 
+	then
+    	printf "$FILE exist. No need to copy\n"
+	else
+    	printf "$FILE doesn't exist. Duplicating defaults\n"
+    	cp settings.txt overrides.cfg
+	fi
+
+    sleep 1
 	cd /home/pi/
 	sudo apt-get update && sudo apt-get upgrade
 	

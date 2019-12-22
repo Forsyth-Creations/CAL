@@ -40,6 +40,8 @@ else
 fi
 
 #Convert sapces to commas
-sed -e 's/\s\+/,/g' $gpio_pins > $gpio_pins
+#sed -e 's/\s\+/,/g' $gpio_pins > $gpio_pins
+
+gpio_pins=`echo $gpio_pins | sed 's/ /,/g'`
 
 printf "%s \n" $gpio_pins

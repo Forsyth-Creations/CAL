@@ -26,7 +26,7 @@ do
         then
             #turn the light show on if its supposed to be active
             printf "Starting LIGHTSHOWPI"
-            cd $SYNCHRONIZED_LIGHTS_HOME/bin/ && ./start_music_and_lights
+            cd $SYNCHRONIZED_LIGHTS_HOME/bin/ && ./start_music_and_lights >/dev/null 2>&1
             exit 0
         fi
     else
@@ -35,7 +35,7 @@ do
         then
             #turn the light show off if its supposed to be active
             printf "Stopping LIGHTSHOWPI"
-            cd $SYNCHRONIZED_LIGHTS_HOME/bin/ && ./stop_music_and_lights
+            cd $SYNCHRONIZED_LIGHTS_HOME/bin/ && ./stop_music_and_lights >/dev/null 2>&1
         fi
 
         #still turn all the lights off after the show (just to be safe)

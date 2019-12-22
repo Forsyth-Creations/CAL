@@ -63,10 +63,10 @@ echo -ne '########           (40%) Playlist was created             \r'
 sleep 1
 #--------Kill All Blynk Scripts--------------------
 sudo killall blynk
-sleep 2
+sleep 1
 #echo "Running Blynk"
 #-------    Active Auto-Update  ------------------
-printf "Auto update is: %s\n" $activateAutoUpdate
+#printf "Auto update is: %s\n" $activateAutoUpdate
 if [ $activateAutoUpdate = "on" ] || [ $activateAutoUpdate = "On" ]
 then
 	echo -ne '############    (50%) Activating Auto Update           \r'
@@ -83,7 +83,7 @@ then
 	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
 	sleep 1
 fi
-echo -ne '####################(100%)                                   \n'
+echo -ne '################(50%) Complete                               \r'
 echo "You're all ready to go!"
 exit
 

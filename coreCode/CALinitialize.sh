@@ -28,6 +28,7 @@ git pull origin >/dev/null 2>&1
 #cd Music/	
 #git pull 
 
+clear
 cd
 echo " "
 echo "     _______   ___   ___               "

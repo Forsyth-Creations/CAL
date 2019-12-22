@@ -34,9 +34,9 @@ networking=${networking:11}
 
 if [ "$active_low_mode" == "0" ]
 then
-    active_low_mode = "no"
+    active_low_mode="no"
 else
-    active_low_mode = "yes"
+    active_low_mode="yes"
 fi
 
 #Convert sapces to commas

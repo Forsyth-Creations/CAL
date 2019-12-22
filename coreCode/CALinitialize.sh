@@ -1,12 +1,25 @@
 #!/bin/bash
 
+cd /home/pi/CAL/config/
+FILE=overrides.cfg
+if test -f "$FILE"; 
+then
+    printf "$FILE exist. Using $FILE for settings\n"
+else
+    printf "$FILE doesn't exist. Using settings.txt for settings\n"
+    FILE=settings.txt
+fi
+
 cd /home/pi/CAL/config
-authCode=$(sed -n '4p' < overrides.cfg)
+authCode=$(sed -n '4p' < $FILE)
 authCode=${authCode:9}
-blynkActivationState=$(sed -n '2p' < overrides.cfg)
-lightshowActivationState=$(sed -n '3p' < overrides.cfg)
+blynkActivationState=$(sed -n '2p' < $FILE)
+lightshowActivationState=$(sed -n '3p' < $FILE)
 blynkActivationState=${blynkActivationState:9}
 lightshowActivationState=${lightshowActivationState:13}
+
+activateAutoUpdate=$(sed -n '13p' < $FILE)
+lightshowActivationState=${activateAutoUpdate:11}
 
 #Pull Latest code from github to run
 cd /home/pi/CAL/
@@ -52,6 +65,14 @@ sleep 1
 sudo killall blynk
 sleep 2
 #echo "Running Blynk"
+#-------    Active Auto-Update  ------------------
+
+if [ $activateAutoUpdate = "on" ] || [ $activateAutoUpdate = "On" ]
+then
+	cd /home/pi/CAL/coreCode/
+	python autoUpdate.py &
+fi
+
 #------------Activate Blynk-----------------------
 if [ $blynkActivationState = "true" ] || [ $blynkActivationState = "True" ]
 then

@@ -12,15 +12,14 @@ lightShowState=${lightShowState:13}
 
 SYNCHRONIZED_LIGHTS_HOME=/home/pi/lightshowpi
 
-printf "Pins used are %s\n" $pinsUsed
-printf "Lightshowpi, based on config, is: %s\n" $lightShowState
+#printf "Pins used are %s\n" $pinsUsed
+#printf "Lightshowpi, based on config, is: %s\n" $lightShowState
 
 for arg in "$@"
 do
     if [ "$arg" == "on" ] || [ "$arg" == "ON" ] 
     then
         printf "Lights Turned On\n"
-        echo "im here"
         #if the lightshow preference is true, activate and exit code
         if [ "$lightShowState" == "true" ] || [ "$lightShowState" == "True" ] 
         then

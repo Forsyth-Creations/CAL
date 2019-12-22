@@ -69,6 +69,7 @@ sleep 2
 
 if [ $activateAutoUpdate = "on" ] || [ $activateAutoUpdate = "On" ]
 then
+	echo -ne '############    (50%) Activating Auto Update           \r'
 	cd /home/pi/CAL/coreCode/
 	python autoUpdate.py &
 fi

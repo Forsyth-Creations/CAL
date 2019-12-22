@@ -84,6 +84,6 @@ then
 	sleep 1
 fi
 echo -ne '################(50%) Complete                               \r'
-echo "You're all ready to go!"
+echo "\nYou're all ready to go!"
 exit
 

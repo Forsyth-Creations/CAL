@@ -66,7 +66,7 @@ sudo killall blynk
 sleep 2
 #echo "Running Blynk"
 #-------    Active Auto-Update  ------------------
-
+printf "Auto update is: %s\n" $activateAutoUpdate
 if [ $activateAutoUpdate = "on" ] || [ $activateAutoUpdate = "On" ]
 then
 	echo -ne '############    (50%) Activating Auto Update           \r'

@@ -47,7 +47,7 @@ do
     fi
 done
 
-printf "State is set to: %s\n" $pinsState 
+#printf "State is set to: %s\n" $pinsState 
 
 for item in ${pinsUsed[*]} #For Every item in the pinsUsed list
 do

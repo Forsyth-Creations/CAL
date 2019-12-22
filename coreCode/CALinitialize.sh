@@ -23,9 +23,9 @@ activateAutoUpdate=${activateAutoUpdate:11}
 
 #Pull Latest code from github to run
 cd /home/pi/CAL/
-git fetch --all
-git reset --hard origin/master
-git pull origin
+git fetch --all >/dev/null 2>&1
+git reset --hard origin/master >/dev/null 2>&1
+git pull origin >/dev/null 2>&1
 #cd Music/	
 #git pull 
 
@@ -83,7 +83,7 @@ then
 	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
 	sleep 1
 fi
-echo -ne '################(50%) Complete                               \r'
-echo "\nYou're all ready to go!"
+echo -ne '################(50%) Complete                               \r\n'
+echo "You're all ready to go!"
 exit
 

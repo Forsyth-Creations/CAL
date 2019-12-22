@@ -83,7 +83,7 @@ then
 	cd /home/pi/blynk-library/linux/ && sudo ./blynk --token=$authCode &> /dev/null &
 	sleep 1
 fi
-echo -ne '################(50%) Complete                               \r\n'
+echo -ne '################(100%) Complete                               \r\n'
 echo "You're all ready to go!"
 exit
 

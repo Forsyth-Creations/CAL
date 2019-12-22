@@ -22,7 +22,7 @@ do
         printf "Lights Turned On\n"
         echo "im here"
         #if the lightshow preference is true, activate and exit code
-        if [$lightShowState == 'true'] || [$lightShowState == 'True']
+        if [$lightShowState == "true"] || [$lightShowState == "True"]
         then
             #turn the light show on if its supposed to be active
             printf "Starting LIGHTSHOWPI"
@@ -31,7 +31,7 @@ do
         fi
     else
 	    printf "Lights Turned Off\n"
-        if [$lightShowState == 'true'] || [$lightShowState == 'True']
+        if [$lightShowState == "true"] || [$lightShowState == "True"]
         then
             #turn the light show off if its supposed to be active
             printf "Stopping LIGHTSHOWPI"

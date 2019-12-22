@@ -17,13 +17,11 @@ printf "Lightshowpi, based on config, is: %s\n" $lightShowState
 
 for arg in "$@"
 do
-    if [ "$arg" == "on" ] || [ "$arg" == "ON" ]
-    then
+    if [ "$arg" == "on" ] || [ "$arg" == "ON" ] then
         printf "Lights Turned On\n"
         echo "im here"
         #if the lightshow preference is true, activate and exit code
-        if ["$lightShowState" == true] || ["$lightShowState" == "True"]
-        then
+        if ["$lightShowState" == true] || ["$lightShowState" == "True"] then
             #turn the light show on if its supposed to be active
             printf "Starting LIGHTSHOWPI"
             cd $SYNCHRONIZED_LIGHTS_HOME/bin/ && ./start_music_and_lights
@@ -31,16 +29,14 @@ do
         fi
     else
 	    printf "Lights Turned Off\n"
-        if ["$lightShowState" == true] || ["$lightShowState" == "True"]
-        then
+        if ["$lightShowState" == true] || ["$lightShowState" == "True"] then
             #turn the light show off if its supposed to be active
             printf "Stopping LIGHTSHOWPI"
             cd $SYNCHRONIZED_LIGHTS_HOME/bin/ && ./stop_music_and_lights
         fi
 
         #still turn all the lights off after the show (just to be safe)
-        if [ $pinsState == 1 ]
-        then
+        if [ $pinsState == 1 ] then
             pinsState=0
         else
 	        pinsState=1

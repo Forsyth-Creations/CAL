@@ -1,3 +1,4 @@
+#!/bin/bash
 
 #build script for the CAL libraries (Blynk and LightShowPi)
 echo "Are you sure you'd like to install CAL, which "

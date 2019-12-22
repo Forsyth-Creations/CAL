@@ -32,7 +32,7 @@ networking=$(sed -n '15p' < $FILE)
 networking=${networking:11}
 #----------------------------------------------------------
 
-if [ "$active_low_mode" = "0" ]
+if [ "$active_low_mode" == "0" ]
 then
     active_low_mode = "no"
 else
